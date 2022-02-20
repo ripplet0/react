@@ -1,0 +1,23 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+function youO() {
+	return <h1>Out</h1>;
+}
+
+function youI() {
+	return <h1>NotOut</h1>;
+}
+
+function youI(props) {
+  const isPoint = props.isPoint;
+  if (isPoint) {
+    return <youI/>;
+  }
+  return <youO/>;
+}
+
+ReactDOM.render(
+  <Goal isPoint={true} />,
+  document.getElementById('root')
+);
